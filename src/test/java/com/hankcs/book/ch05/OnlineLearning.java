@@ -43,10 +43,26 @@ public class OnlineLearning
 
         System.out.println(segment.seg("银川普通人与川普通电话讲四川普通话"));
 
+//        CustomDictionary.insert("原神", "nrf 1");
+        segment.enableCustomDictionaryForcing(false);
+//        for (int i = 0; i < 3; ++i)
+        segment.learn("交易猫");
+        text = "交易猫好用吗";
+        System.out.println(segment.seg(text));
+        System.out.println(segment.seg("交易猫交易账号安全吗"));
+
+        System.out.println(segment.seg("草原神犬"));
+
         segment.enableCustomDictionary(false);
         for (int i = 0; i < 3; ++i)
             segment.learn("人 与 川普 通电话");
+        for (int i = 0; i < 3; ++i) {
+            segment.learn("我们 斗地主");
+        }
+
         System.out.println(segment.seg("银川普通人与川普通电话讲四川普通话"));
+        System.out.println(segment.seg("我们斗地主"));
+        System.out.println(HanLP.segment("崩坏3好玩吗"));
     }
 
 }
